@@ -1,1 +1,17 @@
+body{
+  font-family: 'Times New Roman', Times, serif;
 
+}
+.nav-bar{
+  margin-left:100px;
+  margin-right:100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav ul{
+  display: flex;
+  justify-content:center;
+  list-style: none;
+  gap: 20px;
+}
