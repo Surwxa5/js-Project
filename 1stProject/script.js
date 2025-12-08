@@ -13,7 +13,7 @@ fetch('https://fakestoreapi.com/products')
   })
 })
 }
-loadProduct()
+
 
 function loadProductDetail(id){
   fetch(`https://fakestoreapi.com/products/${id}`)
@@ -25,8 +25,8 @@ function loadProductDetail(id){
     <img src="${data.image}" class="detail-img">
     <div class="detail-info">
     <h2>${data.title}</h2>
-    <p><strong>Price:</strong>$${package.price}</p>
-    <p>${item.description}</p>
+    <p><strong>Price:</strong>$${data.price}</p>
+    <p>${data.description}</p>
     </div>
     </div>
     `
@@ -37,8 +37,9 @@ function loadProductDetail(id){
 
 function goback(){
   location.hash="";
-  document.getElementById("product").style.display="none"
-    document.getElementById('productDetail').style.display="block"
+  // document.getElementById("product").style.display="block"
+  //   document.getElementById('productDetail').style.display="none"
+    window.location.reload()
 }
 
 window.addEventListener("hashchange",()=>{
@@ -48,7 +49,6 @@ window.addEventListener("hashchange",()=>{
 });
 
 loadProduct();
-if(location.hash){
-  loadProductDetail(location.hash.replace("#",""))
-}
-loadProductDetail()
+  loadProductDetail()
+
+
