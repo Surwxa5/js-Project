@@ -22,7 +22,7 @@ function loadProductDetail(id){
   document.getElementById('productDetail').innerHTML+=`
   <button onclick="goback()"class="back-btn">Back</button>
   <div class="detail">
-    <img src="${data.image}" class="detail-img">
+    <img src="${data.image}"class="detail-img">
     <div class="detail-info">
     <h2>${data.title}</h2>
     <p><strong>Price:</strong>$${data.price}</p>
