@@ -1,0 +1,39 @@
+.whole-page{
+  font-family: 'Times New Roman', Times, serif;
+
+}
+.content{
+ margin-left: 200px;
+  margin-right: 200px;
+  padding: 10px;
+}
+.all{
+  background-color: black;
+}
+.upper-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  
+}
+.upper-section a{
+  color: white;
+  opacity: 0.7;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar ul{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  list-style: none;
+
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: black;
+}
