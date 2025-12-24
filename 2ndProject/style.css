@@ -2,10 +2,13 @@
   font-family: 'Times New Roman', Times, serif;
 
 }
-.content{
+.upper-section,.Nav,.all-content {
  margin-left: 200px;
   margin-right: 200px;
   padding: 10px;
+}
+.navbar{
+  background-color: white;
 }
 .all{
   background-color: black;
@@ -21,7 +24,7 @@
   color: white;
   opacity: 0.7;
 }
-.navbar{
+.Nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,4 +39,27 @@
 .navbar ul li a{
   text-decoration: none;
   color: black;
+}
+.homepage{
+background-color: skyblue;
+}
+.all-content{
+  
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.image img{
+  width: 400px;
+}
+.text,.image{
+  margin-top: 120px;
+  margin-bottom: 90px;
+}
+.product{
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
 }
