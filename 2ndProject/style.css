@@ -67,3 +67,10 @@ background-color: skyblue;
   display: flex;
   align-items: center;
 }
+.disimage img{
+  width: 100px;
+  height: 100px;
+}
+.discount .cart1 .text{
+  width: 200px;
+}
