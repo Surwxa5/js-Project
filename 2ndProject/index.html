@@ -1,65 +1,388 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>js ecom website</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <title>Nepali Shop</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-<main class="whole-page">                                                                                                                   
-  <div class="content">
-    <div class="Herosection">
-      <div class="all">
+
+<main class="whole-page">
+
+  <!-- TOP BAR -->
+  <div class="all">
     <section class="upper-section">
-      
-      <p>Free shipping ,30-days return or refund guarantee</p>
+      <p>Free shipping, 30-days return or refund guarantee</p>
       <div class="link">
-      <a href="">signup</a>
-      <a href="">sign in</a>
+        <a href="#">SIGN IN</a>
+        <a href="#">SIGN UP</a>
+      </div>
     </section>
-     </div>
-    <section class="navbar">
-      <div class="Nav">
-      <h1>Nepali shop</h1>
+  </div>
+
+  <!-- NAVBAR -->
+  <section class="navbar">
+    <div class="Nav">
+      <h1 class="logo">NEPALI STORE</h1>
       <ul>
-        <li><a href="">HOME</a></li>
-        <li><a href="">ABOUT</a></li>
-        <li><a href="">PRODUCTS</a></li>
-        <li><a href="">CONTACT</a></li>
-        <a href="">
-        <i class="fa-solid fa-basket-shopping"  id="cart" style="border: 1px solid black; padding: 10px 15px; background-color: black; color: white;"> 0 </i>
-        </a>
+        <li><a href="/">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="product.html">PRODUCTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
       </ul>
-      </div>
-    </section>
-    <section class="homepage">
-      <div class="all-content">
-      <div class="text"><h5>EXPLORE THE LATEST IN TECH INDUSTRIES </h5>
-        <H1 style="color: blue;width: 400px;font-size: 40px;">Your Destination for Cutting-Edge Gadgets!</H1>
-        <p style="color: white;width: 400px;">welcome to Thapa eComStore. your ultimate destination for cutting-edge googets !Explore the latest in tech innovation and style with us shop now and discover ar world of possibilities</p>
-      <button class="product">Explore Our Products</button>
-      </div>
-      <div class="image">
-        <img src="public/image1.jpg" alt="">
-      </div>
-      </div>
-    </section>
-  </div>
-<div class="discount">
-  <div class="cart1">
-    <div class="text">
-    <h5>NEW YEAR SALE</h5>
-    <h1>Get And Extra 50% Off</h1>
-    <a href="">shop Now</a>
-    </div> 
-    <div class="disimage">
-    <img src="public/imagedis2.jpg" alt="image">
+      <a href="#" id="cart">
+        <i class="fa-solid fa-basket-shopping"> 0</i>
+      </a>
     </div>
+  </section>
+
+  <!-- HERO SECTION -->
+  <section class="homepage">
+    <div class="all-content">
+
+      <div class="text">
+        <h5>EXPLORE THE LATEST IN TECH INDUSTRIES</h5>
+        <h1>Your Destination for Cutting-Edge Gadgets!</h1>
+        <p>
+          Welcome to Thapa eComStore. Your ultimate destination for
+          cutting-edge gadgets. Shop now and discover a world of possibilities.
+        </p>
+        <button class="product-btn">Explore Our Products</button>
+      </div>
+
+      <div class="image">
+        <img src="public/image1.jpg" alt="products">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DISCOUNT SECTION -->
+  <section class="discount">
+
+    <div class="cart1">
+      <div class="text1">
+        <h5>NEW YEAR SALE</h5>
+        <h2>Get Extra 50% Off</h2>
+        <a href="#">Shop Now </a>
+      </div>
+      <div class="disimage">
+        <img src="public/imagedis2.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="cart1">
+      <div class="text1">
+        <h5>NEW YEAR SALE</h5>
+        <h2>Get Extra 50% Off</h2>
+        <a href="#">Shop Now </a>
+      </div>
+      <div class="disimage">
+        <img src="public/laptop.webp" alt="">
+      </div>
+    </div>
+
+    <div class="cart1">
+      <div class="text1">
+        <h5>NEW YEAR SALE</h5>
+        <h2>Get Extra 50% Off</h2>
+        <a href="#">Shop Now </a>
+      </div>
+      <div class="disimage">
+        <img src="public/imagedis1.png" alt="">
+      </div>
+    </div>
+
+  </section>
+<!-- starting of product section -->
+
+<section class="section-products">
+<div class="container">
+  <div class="section-common-heading">
+    Checkout Nepali Store
   </div>
+  <section class="container2">
+    <div id="productContainer">
+      <tamplate id="productTamplate">
+  <div class="cards" id="cardValue">
+    <article class="information [card]">
+      <span class="category">Audio</span>
+      <div class="imageContainer">
+        <img src="public/wirelessheadphone.jpg" class="productImage" style="width: 160px;margin-top: 50px;" alt="image">
+      </div>
+      <h2 class="productName">Wireless Headphones</h2>
+      <p class="productDescription" style="font-size: 15px;margin-top: 15px;margin-bottom: 15px;width: 300px;">a portable, all-in-one personal computer with a hinged "clamshell" design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.</p>
+      <div class="productPriceElecment">
+        <p class="productPrice">Rs140.99</p>
+        <p class="productActualPrice"><del>Rs599</del></p>
+      </div>
+      <div class="productStockElement">
+        <p class="productProperty">Total Stocks Available</p>
+        <p class="productStock">30</p>
+      </div>
+
+      <div class="productQuantityElement">
+        <p class="productProperty">Quantity(pieces)</p>
+        <div class="stockElement">
+          <button class="cartIncrement">+</button>
+          <p class="productQuantity">1</p>
+          <button class="cartDecrement">-</button>
+        </div>
+      </div>
+
+      <button class="add-to-cart-button">
+        <i class="fa-solid fa-basket-shopping"> </i>Add to Cart
+      </button>
+    </article>
+  </div>
+ </tamplate>
+
+    </div>
+    <div id="productContainer">
+      <tamplate id="productTamplate">
+  <div class="cards" id="cardValue">
+    <article class="information [card]">
+      <span class="category">Mobiles</span>
+      <div class="imageContainer">
+        <img src="public/phone.jpg" class="productImage" style="width: 300px;margin-top: 50px;" alt="image">
+      </div>
+      <h2 class="productName">Smartphone</h2>
+      <p class="productDescription" style="font-size: 15px;margin-top: 15px;margin-bottom: 15px;width: 300px;">a portable, all-in-one personal computer with a hinged "clamshell" design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.</p>
+      <div class="productPriceElecment">
+        <p class="productPrice">Rs499.99</p>
+        <p class="productActualPrice"><del>Rs1999</del></p>
+      </div>
+      <div class="productStockElement">
+        <p class="productProperty">Total Stocks Available</p>
+        <p class="productStock">100</p>
+      </div>
+
+      <div class="productQuantityElement">
+        <p class="productProperty">Quantity(pieces)</p>
+        <div class="stockElement">
+          <button class="cartIncrement">+</button>
+          <p class="productQuantity">1</p>
+          <button class="cartDecrement">-</button>
+        </div>
+      </div>
+
+      <button class="add-to-cart-button">
+        <i class="fa-solid fa-basket-shopping"> </i>Add to Cart
+      </button>
+    </article>
+  </div>
+ </tamplate>
+
+    </div>
+    <div id="productContainer">
+      <tamplate id="productTamplate">
+  <div class="cards" id="cardValue">
+    <article class="information [card]">
+      <span class="category">Computer</span>
+      <div class="imageContainer">
+        <img src="public/laptop.webp" class="productImage" style="width: 220px;margin-top: 50px;" alt="image">
+      </div>
+      <h2 class="productName">Laptop</h2>
+      <p class="productDescription" style="font-size: 15px;margin-top: 15px;margin-bottom: 15px;width: 300px;">a portable, all-in-one personal computer with a hinged "clamshell" design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.</p>
+      <div class="productPriceElecment">
+        <p class="productPrice">Rs999.99</p>
+        <p class="productActualPrice"><del>Rs3999</del></p>
+      </div>
+      <div class="productStockElement">
+        <p class="productProperty">Total Stocks Available</p>
+        <p class="productStock">50</p>
+      </div>
+
+      <div class="productQuantityElement">
+        <p class="productProperty">Quantity(pieces)</p>
+        <div class="stockElement">
+          <button class="cartIncrement">+</button>
+          <p class="productQuantity">1</p>
+          <button class="cartDecrement">-</button>
+        </div>
+      </div>
+
+      <button class="add-to-cart-button">
+        <i class="fa-solid fa-basket-shopping"> </i>Add to Cart
+      </button>
+    </article>
+  </div>
+ </tamplate>
+
+    </div>
+    <div id="productContainer">
+      <tamplate id="productTamplate">
+  <div class="cards" id="cardValue">
+    <article class="information [card]">
+      <span class="category">Wearables</span>
+      <div class="imageContainer">
+        <img src="public/watch.jpg" class="productImage" style="width: 250px;
+      height: 230px;  margin-top: 50px;" alt="image">
+      </div>
+      <h2 class="productName">Watches</h2>
+      <p class="productDescription" style="font-size: 15px;margin-top: 15px;margin-bottom: 15px;width: 300px;">a portable, all-in-one personal computer with a hinged "clamshell" design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.</p>
+      <div class="productPriceElecment">
+        <p class="productPrice">Rs199.99</p>
+        <p class="productActualPrice"><del>Rs799</del></p>
+      </div>
+      <div class="productStockElement">
+        <p class="productProperty">Total Stocks Available</p>
+        <p class="productStock">20</p>
+      </div>
+
+      <div class="productQuantityElement">
+        <p class="productProperty">Quantity(pieces)</p>
+        <div class="stockElement">
+          <button class="cartIncrement">+</button>
+          <p class="productQuantity">1</p>
+          <button class="cartDecrement">-</button>
+        </div>
+      </div>
+
+      <button class="add-to-cart-button">
+        <i class="fa-solid fa-basket-shopping"> </i>Add to Cart
+      </button>
+    </article>
+  </div>
+ </tamplate>
+
+    </div>
+    <div id="productContainer">
+      <tamplate id="productTamplate">
+  <div class="cards" id="cardValue">
+    <article class="information [card]">
+      <span class="category">Audio</span>
+      <div class="imageContainer">
+        <img src="public/speaker.jpg" class="productImage" style="width: 220px;margin-top: 50px;" alt="image">
+      </div>
+      <h2 class="productName">Speaker</h2>
+      <p class="productDescription" style="font-size: 15px;margin-top: 15px;margin-bottom: 15px;width: 300px;">a portable, all-in-one personal computer with a hinged "clamshell" design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.</p>
+      <div class="productPriceElecment">
+        <p class="productPrice">Rs149.99</p>
+        <p class="productActualPrice"><del>Rs599</del></p>
+      </div>
+      <div class="productStockElement">
+        <p class="productProperty">Total Stocks Available</p>
+        <p class="productStock">30</p>
+      </div>
+
+      <div class="productQuantityElement">
+        <p class="productProperty">Quantity(pieces)</p>
+        <div class="stockElement">
+          <button class="cartIncrement">+</button>
+          <p class="productQuantity">1</p>
+          <button class="cartDecrement">-</button>
+        </div>
+      </div>
+
+      <button class="add-to-cart-button">
+        <i class="fa-solid fa-basket-shopping"> </i>Add to Cart
+      </button>
+    </article>
+  </div>
+ </tamplate>
+
+    </div>
+    <div id="productContainer">
+      <tamplate id="productTamplate">
+  <div class="cards" id="cardValue">
+    <article class="information [card]">
+      <span class="category">Video</span>
+      <div class="imageContainer">
+        <img src="public/television.jpg" class="productImage" style="width: 220px;margin-top: 50px;" alt="image">
+      </div>
+      <h2 class="productName">Television</h2>
+      <p class="productDescription" style="font-size: 15px;margin-top: 15px;margin-bottom: 15px;width: 300px;">a portable, all-in-one personal computer with a hinged "clamshell" design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.</p>
+      <div class="productPriceElecment">
+        <p class="productPrice">Rs199.99</p>
+        <p class="productActualPrice"><del>Rs799</del></p>
+      </div>
+      <div class="productStockElement">
+        <p class="productProperty">Total Stocks Available</p>
+        <p class="productStock">50</p>
+      </div>
+
+      <div class="productQuantityElement">
+        <p class="productProperty">Quantity(pieces)</p>
+        <div class="stockElement">
+          <button class="cartIncrement">+</button>
+          <p class="productQuantity">1</p>
+          <button class="cartDecrement">-</button>
+        </div>
+      </div>
+
+      <button class="add-to-cart-button">
+        <i class="fa-solid fa-basket-shopping"> </i>Add to Cart
+      </button>
+    </article>
+  </div>
+ </tamplate>
+
+    </div>
+  </section>
 </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-box">
+      <h2 class="footer-logo">Nepali STORE</h2>
+      <p>
+        Your ultimate destination for cutting-edge gadgets.
+        Shop smart. Shop secure. Shop with confidence.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Customer Support -->
+    <div class="footer-box">
+      <h3>Customer Support</h3>
+      <ul>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-box">
+      <h3>Subscribe</h3>
+      <p>Get updates about new products & offers</p>
+      <form class="footer-form">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="footer-bottom">
+    <p>© 2026 Nepali Store. All Rights Reserved.</p>
+  </div>
+</footer>
+
+ 
+
+
+
 </main>
+
 </body>
 </html>
