@@ -14,7 +14,7 @@
     "category":"Mobiles",
     "price":499.99,
     "stock":100,
-    "description":"a portable, all-in-one personal computer with a hinged  design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.",
+    "description":"Stay connected with a sleek and powerful smartphone built for speed and style. Enjoy a vivid display, high-quality camera, and reliable battery life for work, social media, gaming, and daily communication.",
     "image":"public/phone.jpg"
   },
   {
@@ -23,7 +23,7 @@
     "category":"Audio",
     "price":149.99,
     "stock":30,
-    "description":"a portable, all-in-one personal computer with a hinged  design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.",
+    "description":"Experience immersive sound with these wireless headphones. Featuring noise isolation, deep bass, and a comfortable fit, they are perfect for music, calls, workouts, and long listening sessions without tangled wires.",
     "image":"public/wirelessheadphone.jpg"
   },
   {
@@ -32,15 +32,16 @@
     "category":"Wearables",
     "price":199.99,
     "stock":20,
-    "description":"a portable, all-in-one personal computer with a hinged  design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.",
+    "description":"A perfect blend of style and functionality, this watch complements both casual and formal looks. Designed with precision and durability, it helps you stay on time while enhancing your everyday fashion.",
     "image":"public/Watch.jpg"
   },
   {
     "id":5,
     "name":"Speaker",
+     "price":599.99,
     "category":"Audio",
     "stock":30,
-    "description":"a portable, all-in-one personal computer with a hinged  design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.",
+    "description":"Bring your music to life with this powerful speaker. Delivering clear audio and rich bass, it’s ideal for parties, outdoor gatherings, or home entertainment, with easy connectivity and portable design.",
     "image":"public/speaker.jpg"
   },
   {
@@ -49,7 +50,7 @@
     "category":"video",
     "price":199.99,
     "stock":20,
-    "description":"a portable, all-in-one personal computer with a hinged  design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.",
+    "description":"Upgrade your viewing experience with this high-quality television. Enjoy sharp visuals, vibrant colors, and immersive sound, making movies, sports, and gaming more enjoyable from the comfort of your home.",
     "image":"public/television.jpg"
   }
   

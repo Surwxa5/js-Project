@@ -7,7 +7,7 @@
 
 /*  COMMON WIDTH */
 .upper-section,
-.Nav,
+.navbar,
 .all-content,
 .discount,.container2 {
   max-width: 1200px;
@@ -79,7 +79,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 50px;
+  gap: 100px;
 }
 
 .text h1 {
@@ -137,18 +137,21 @@
 }
 
 /* product selection tamplate */
-.container2{
- display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 4.8rem;
-
+.cards{
+  box-shadow: 1px 2px 4px  rgb(0 0 0 / 0.8);
+  padding: 10px 15px;
 }
-#productContainer{
+/* #productContainer{
   padding: 15px;
     margin-top: 80px;
   width: 300px;
   box-shadow: 1px 2px 4px  rgb(0 0 0 / 0.8);
+} */
+.productImage{
+  width: 200px;
+  height: 180px;
 }
+
 .stockElement{
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -156,7 +159,7 @@ gap: 4.8rem;
   /* colors applied specifically to the borders of various UI elements, like containers and separators. */
   border: 0.2rem solid var(--bordercolor);
   border-radius: 0.8rem;
-  
+  gap: 70px;
 }
 .stockElement button{
   background-color: transparent;
@@ -174,7 +177,10 @@ gap: 4.8rem;
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 4.8rem;
+ margin-top: 80px;
+  
 }
+
 .productPriceElecment{
   display: flex;
   gap: 10px;
@@ -194,14 +200,14 @@ gap: 4.8rem;
 }
 .category{
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color:rgb(237, 217, 220);
-  padding: 10px;
+  padding: 3px;
 }
 .add-to-cart-button {
    margin-top: 30px;
-  background-color: black;
-  color: white;
+  background-color: skyblue;
+  color: black;
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
