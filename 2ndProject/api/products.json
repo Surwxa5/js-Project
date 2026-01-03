@@ -1,0 +1,56 @@
+[
+  {
+    "id":1,
+    "name":"Laptop",
+    "category":"computers",
+    "price":999.99,
+    "stock":50,
+    "description":"a portable, all-in-one personal computer with a hinged  design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.",
+    "image":"public/laptop.webp"
+  },
+  {
+    "id":2,
+    "name":"smartphone",
+    "category":"Mobiles",
+    "price":499.99,
+    "stock":100,
+    "description":"a portable, all-in-one personal computer with a hinged  design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.",
+    "image":"public/phone.jpg"
+  },
+  {
+    "id":3,
+    "name":"Wireless Headphones",
+    "category":"Audio",
+    "price":149.99,
+    "stock":30,
+    "description":"a portable, all-in-one personal computer with a hinged  design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.",
+    "image":"public/wirelessheadphone.jpg"
+  },
+  {
+    "id":4,
+    "name":"Watches",
+    "category":"Wearables",
+    "price":199.99,
+    "stock":20,
+    "description":"a portable, all-in-one personal computer with a hinged  design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.",
+    "image":"public/Watch.jpg"
+  },
+  {
+    "id":5,
+    "name":"Speaker",
+    "category":"Audio",
+    "stock":30,
+    "description":"a portable, all-in-one personal computer with a hinged  design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.",
+    "image":"public/speaker.jpg"
+  },
+  {
+    "id":6,
+    "name":"Television",
+    "category":"video",
+    "price":199.99,
+    "stock":20,
+    "description":"a portable, all-in-one personal computer with a hinged  design, featuring a built-in  offering similar functionality to a desktop for tasks like browsing, creating documents, and gaming.",
+    "image":"public/television.jpg"
+  }
+  
+]
