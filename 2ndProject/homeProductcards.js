@@ -1,3 +1,4 @@
+import { addToCart } from "./addToCart";
 import { homeQuantityToggle } from "./homeQuantityToggle";
 
 const productContainer= document.querySelector('#productContainer');
@@ -33,6 +34,11 @@ export const showProductContainer=(products)=>{
       .addEventListener("click",(event)=>{
         // ctrl and space for automatic space
         homeQuantityToggle(event,id,stock)
+      })
+
+      // retrive the current product quantity and price in card element
+      productClone.querySelector(".add-to-cart-button").addEventListener('click',(event)=>{
+        addToCart(event,id,stock)
       })
 
     productContainer.append(productClone)
