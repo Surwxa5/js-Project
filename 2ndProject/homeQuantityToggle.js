@@ -5,12 +5,14 @@ const currentCardElement=document.querySelector(`#card${id}`)
 // accesing the only productquentity data 
 const productQuantity=currentCardElement.querySelector(".productQuantity")
 
+
 // to work on the quantity 1 and getting the quantity
 
 
-let quantity=parseInt(productQuantity.getAttribute('data-quantity'))|| 1;
+let quantity=parseInt(productQuantity.getAttribute('data-quantity'))||1;
 
-if(event.target.className==="cartIncrement"){
+if (event.target.className==="cartIncrement")
+{
   if(quantity<stock){
     quantity+=1;
   }
@@ -18,14 +20,16 @@ if(event.target.className==="cartIncrement"){
     quantity=stock;
   }
 }
-
-if(event.target.className==="cartDecrement"){
+// classList.contains() checks presence, not exact match
+if (event.target.className==="cartDecrement")
+{
   if(quantity>1){
     quantity-=1;
   }
 }
 // now we have to set the updated value of quantity
 productQuantity.innerText=quantity;
+console.log(quantity)
 productQuantity.setAttribute('data-quantity',quantity)
 return quantity;
   }

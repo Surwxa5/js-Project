@@ -4,5 +4,6 @@ export const getcartProductFromls=()=>{
   if(!cartProducts){
     return[]
   }
-  cartProducts=JSON.parse(cartProducts)   
+  cartProducts=JSON.parse(cartProducts) 
+  return cartProducts;  
 }
