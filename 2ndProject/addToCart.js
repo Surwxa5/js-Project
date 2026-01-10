@@ -1,4 +1,5 @@
 import { getcartProductFromls } from "./getCartProducts";
+import { updateCart } from "./updateCart";
 
 export const addToCart=(event,id,stock)=>{
 // getting all the value user clicked
@@ -6,14 +7,23 @@ export const addToCart=(event,id,stock)=>{
   const currentProdElem=document.querySelector(`#card${id}`);
   
   const quantity=currentProdElem.querySelector(".productQuantity").innerText
-  let price=currentProdElem.querySelector(".productPrice").innerText;
+  let price=Number(currentProdElem.querySelector(".productPrice").innerText);
   
-console.log(quantity,price)
-  price=price.replace("Rs","" )
+
+  price=(price.replace("Rs","" ).trim())
+
+  let existingProd=arrLocalStorageProduct.find((curProd)=>curProd.id===id)
+  if(existingProd){
+    return false;
+  }
   price=price*quantity;
   
- 
+//  let updatecart={id,quantity,price}
   arrLocalStorageProduct.push({id,quantity,price})
   localStorage.setItem('cartProductls',JSON.stringify(arrLocalStorageProduct))
+
+  // Update the cart button
+  updateCart(arrLocalStorageProduct)
+
 
 };
