@@ -9,15 +9,14 @@ export const addToCart=(event,id,stock)=>{
   const quantity=currentProdElem.querySelector(".productQuantity").innerText
   let price=Number(currentProdElem.querySelector(".productPrice").innerText);
   
-
-  price=(price.replace("Rs","" ).trim())
+console.log(price,"price")
 
   let existingProd=arrLocalStorageProduct.find((curProd)=>curProd.id===id)
   if(existingProd){
     return false;
   }
   price=price*quantity;
-  
+  console.log("Price",price)
 //  let updatecart={id,quantity,price}
   arrLocalStorageProduct.push({id,quantity,price})
   localStorage.setItem('cartProductls',JSON.stringify(arrLocalStorageProduct))
