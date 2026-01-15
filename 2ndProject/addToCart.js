@@ -33,6 +33,6 @@ export const addToCart=(event,id,stock)=>{
 
   // Update the cart button
   updateCart(arrLocalStorageProduct)
-
+// have to practice react so work on this tomorrow
 
 };
