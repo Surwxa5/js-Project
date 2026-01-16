@@ -12,27 +12,30 @@ export const addToCart=(event,id,stock)=>{
 
   let existingProd=arrLocalStorageProduct.find((curProd)=>curProd.id===id)
 
-  if(existingProd && quantity>1){
-    quantity = Number(existingProd.quantity)+Number(quantity)
+   if(existingProd && quantity>1 ){
+    Totalquantity = Number(existingProd.quantity)+Number(quantity)
     price=Number(price*quantity)
     let updatedcart={id,quantity,price}
+
    updatedcart= arrLocalStorageProduct.map((curProd)=>{
         return(curProd.id===id)?updatedcart:   curProd;   
     })
-     localStorage.setItem('cartProductls',JSON.stringify(updatedcart)) 
+    localStorage.setItem('cartProductls',JSON.stringify(updatedcart))
     console.log(updatedcart)
   }
   if(existingProd)
-     return false
+  {
 
+     return false
+  }
   price=Number(price*quantity)
-  quantity=Number(quantity)
+  // quantity=quantity
 //  let updatecart={id,quantity,price}
   arrLocalStorageProduct.push({id,quantity,price})
   localStorage.setItem('cartProductls',JSON.stringify(arrLocalStorageProduct))
 
   // Update the cart button
   updateCart(arrLocalStorageProduct)
-// have to practice react so work on this tomorrow
+
 
 };
