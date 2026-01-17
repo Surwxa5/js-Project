@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nepali Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>JavaScript Ecommerce</title>
 </head>
 <body>
-
-<main class="whole-page">
-
-  <!-- TOP BAR -->
-  <div class="all">
+  <!-- Top section  -->
+   <div class="all">
     <section class="upper-section">
       <p>Free shipping, 30-days return or refund guarantee</p>
       <div class="link">
@@ -21,7 +19,7 @@
     </section>
   </div>
 
-  <!-- NAVBAR -->
+  <!-- navbar -->
   <section class="navbar">
     <div class="Nav">
       <h1 class="logo">NEPALI STORE</h1>
@@ -36,77 +34,37 @@
       </a>
     </div>
   </section>
-
-  <!-- HERO SECTION -->
-  <section class="homepage">
-    <div class="all-content">
-
-      <div class="text">
-        <h5>EXPLORE THE LATEST IN TECH INDUSTRIES</h5>
-        <h1>Your Destination for Cutting-Edge Gadgets!</h1>
-        <p>
-          Welcome to Thapa eComStore. Your ultimate destination for
-          cutting-edge gadgets. Shop now and discover a world of possibilities.
-        </p>
-        <button class="product-btn">Explore Our Products</button>
-      </div>
-
-      <div class="image">
-        <img src="public/image1.jpg" alt="products">
-      </div>
-
+<!-- End of navbar -->
+  <section class="addToCartElement">
+    <div class="container">
+      <section>
+        <div id="productCartContainer"></div>
+      </section>
+      <section class="productCArtTotalElem">
+        <div class="productOrderTotalElement">
+          <p>Selected Offer Summary</p>
+          <div class="productOrderTotal">
+          <div>
+            <p>Sub Total:</p>
+            <p class="productSubTotal">0</p>
+          </div>
+          </div>
+          <div>
+            <p>Tax:</p>
+            <p class="productTax">50</p>
+          </div>
+          <hr />
+          <div>
+            <p>Final Total:</p>
+            <p class="productFinalTotal">0</p>
+          </div>
+        </div>
+      </section>
     </div>
   </section>
 
-  <!-- DISCOUNT SECTION -->
-  <section class="discount">
-
-    <div class="cart1">
-      <div class="text1">
-        <h5>NEW YEAR SALE</h5>
-        <h2>Get Extra 50% Off</h2>
-        <a href="#">Shop Now </a>
-      </div>
-      <div class="disimage">
-        <img src="public/imagedis2.jpg" alt="">
-      </div>
-    </div>
-
-    <div class="cart1">
-      <div class="text1">
-        <h5>NEW YEAR SALE</h5>
-        <h2>Get Extra 50% Off</h2>
-        <a href="#">Shop Now </a>
-      </div>
-      <div class="disimage">
-        <img src="public/laptop.webp" alt="">
-      </div>
-    </div>
-
-    <div class="cart1">
-      <div class="text1">
-        <h5>NEW YEAR SALE</h5>
-        <h2>Get Extra 50% Off</h2>
-        <a href="#">Shop Now </a>
-      </div>
-      <div class="disimage">
-        <img src="public/imagedis1.png" alt="">
-      </div>
-    </div>
-
-  </section>
-<!-- starting of product section -->
-
-<section class="section-products">
-<div class="container">
-  <div class="section-common-heading">
-    Checkout Nepali Store
-  </div>
-  <section class="container2">
-    <div id="productContainer">
-</div>
-</section>
-  <template id="productCartTemplate">
+  <!-- Templete for a product -->
+   <template id="productTemplate">
   <div class="cards" id="cardValue">
     <article class="information [card]">
       <span class="category"></span>
@@ -114,22 +72,33 @@
         <img src="" class="productImage" alt="image">
       </div>
       <h2 class="productName"></h2>
-      
+      <p class="productDescription" style="width: 280px;"></p>
+      <div style="margin-top: 10px;" class="productPriceElecment">
         <p class="productPrice"></p>
+        <p class="productActualPrice"style="text-decoration: line-through;"></p>
+      </div>
+      <div class="productStockElement">
+        <p class="productProperty">Total Stocks Available</p>
+        <p class="productStock">30</p>
+      </div>
 
+      <div class="productQuantityElement">
+        <p class="productProperty">Quantity(pieces)</p>
         <div class="stockElement">
           <button class="cartIncrement">+</button>
           <p class="productQuantity">1</p>
           <button class="cartDecrement">-</button>
         </div>
-      <!-- for removing the add to cart button -->
-       <button class="add-to-cart-button remove-to-cart-button">Remove</button>
+      </div>
 
+      <button class="add-to-cart-button">
+        <i class="fa-solid fa-basket-shopping"></i>Add to Cart
+      </button>
     </article>
   </div>
  </template>
-<!-- FOOTER -->
-<footer class="footer">
+  <!-- footer -->
+   <footer class="footer">
   <div class="footer-container">
 
     <!-- Brand -->
@@ -180,7 +149,7 @@
     <p>© 2026 Nepali Store. All Rights Reserved.</p>
   </div>
 </footer>
-</main>
-<script src="script.js" type="module"></script>
-</body>
+<script type="module" src="showAddToCartCards.js
+"></script>
+</body> 
 </html>
