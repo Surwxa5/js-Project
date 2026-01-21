@@ -2,7 +2,7 @@ import { addToCart } from "./addToCart";
 import { homeQuantityToggle } from "./homeQuantityToggle";
 
 const productContainer= document.querySelector('#productContainer');
-const productTemplate=document.querySelector('#productTemplate')
+const productTemplate=document.querySelector('#productCartTemplate')
 
 // check if the product exit or not 2nd
 export const showProductContainer=(products)=>{
@@ -16,6 +16,7 @@ export const showProductContainer=(products)=>{
     // to clone the content of  template element we have to use importNode
     
     const productClone=document.importNode(productTemplate.content,true);
+    console.log(productTemplate)
 
     productClone.querySelector('#cardValue').setAttribute('id',`card${id}`)
 
@@ -24,7 +25,8 @@ export const showProductContainer=(products)=>{
     productClone.querySelector('.productName').textContent=name;
     productClone.querySelector('.productImage').src=image;
     productClone.querySelector('.productImage').alt=image;
-     productClone.querySelector('.productDescription').textContent=description;
+     productClone.querySelector('.productDescription').textContent = description;
+
       productClone.querySelector('.productStock').textContent=stock;
       productClone.querySelector('.productPrice').textContent=`Rs${price}`;
       productClone.querySelector('.productActualPrice').textContent=`Rs${price *2}`;

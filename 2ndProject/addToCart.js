@@ -34,7 +34,7 @@ export const addToCart = (event, id, stock) => {
     (curProd) => curProd.id === id
   );
 
-  // ✅ If product exists → update quantity & price
+  //  If product exists → update quantity & price
   if (existingProd) {
     const updatedCart = arrLocalStorageProduct.map((curProd) => {
       if (curProd.id === id) {
