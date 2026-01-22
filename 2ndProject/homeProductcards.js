@@ -16,7 +16,6 @@ export const showProductContainer=(products)=>{
     // to clone the content of  template element we have to use importNode
     
     const productClone=document.importNode(productTemplate.content,true);
-    console.log(productTemplate)
 
     productClone.querySelector('#cardValue').setAttribute('id',`card${id}`)
 
@@ -29,7 +28,7 @@ export const showProductContainer=(products)=>{
 
       productClone.querySelector('.productStock').textContent=stock;
       productClone.querySelector('.productPrice').textContent=`Rs${price}`;
-      productClone.querySelector('.productActualPrice').textContent=`Rs${price *2}`;
+      productClone.querySelector('.productPrice').textContent=`Rs${price *2}`;
 
       // from here working on increment and decrement of the button
       productClone.querySelector(".stockElement")
