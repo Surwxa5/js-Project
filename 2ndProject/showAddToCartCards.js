@@ -1,9 +1,17 @@
-import products from "./api/products.json";
-import { getcartProductFromls } from "./getCartProducts";
+
+import { getcartProductFromls } from "./getCartProducts.js";
+
 
 
 let cartProducts=getcartProductFromls();
 
-let filterProducts=products.filter((curProd)=>{
-console.log(curProd.id)
-})
+async function loadProducts() {
+  const response = await fetch("./api/products.json");
+  const products = await response.json();
+
+let filterProducts = products.filter((curProd) => {
+  return curProd.id; // or any condition
+});
+}
+
+loadProducts();
