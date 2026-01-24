@@ -10,8 +10,11 @@ async function loadProducts() {
   const products = await response.json();
 
 let filterProducts = products.filter((curProd) => {
-  return curProd.id; // or any condition
+  return curProd.id; // or any condition 
 });
 }
 
 loadProducts();
+
+
+// could not  understant this part
