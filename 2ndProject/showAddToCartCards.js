@@ -17,4 +17,4 @@ let filterProducts = products.filter((curProd) => {
 loadProducts();
 
 
-// could not  understant this part
+
