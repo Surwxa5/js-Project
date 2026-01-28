@@ -1,4 +1,5 @@
 import products from "./api/products.json";
+import { fetchQuantityFromCartLS } from "./fetchQuantityFromCartLS";
 import { getcartProductFromls } from "./getCartProducts";
 
 
@@ -21,6 +22,7 @@ filterProducts.forEach((curProd)=>{
   const {category,id,image,name,stock,price}=curProd
   let productClone=document.importNode(templateContainer.content,true);
   
+const lsAcutalData = fetchQuantityFromCartLS(id,price)
 
    productClone.querySelector('#cardValue').setAttribute('id',`card${id}`)
   productClone.querySelector('.category').textContent = category;
