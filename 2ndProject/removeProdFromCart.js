@@ -1,0 +1,16 @@
+import { getcartProductFromls } from "./getCartProducts";
+
+export const removeProdFromCart =(id)=>{
+  
+  let cartProducts=getcartProductFromls();
+  cartProducts = cartProducts.filter((curProd)=>curProd.id===id);
+
+// update the local storage after removing the item
+localStorage.setItem("cartProductLS",JSON. stringify(arrLocalStorageproduct))
+
+// to remove the  div click
+
+let removeDiv=document.getElementById(`card${id}`)
+if(removeDiv.remove())
+updateCart()
+}

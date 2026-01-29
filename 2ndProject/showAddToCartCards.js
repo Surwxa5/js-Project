@@ -1,6 +1,7 @@
 import products from "./api/products.json";
 import { fetchQuantityFromCartLS } from "./fetchQuantityFromCartLS";
 import { getcartProductFromls } from "./getCartProducts";
+import { removeProdFromCart } from "./removeProdFromCart";
 
 
 let cartProducts=getcartProductFromls();
@@ -28,8 +29,22 @@ const lsAcutalData = fetchQuantityFromCartLS(id,price)
   productClone.querySelector('.category').textContent = category;
    productClone.querySelector('.productName').textContent=name;
     productClone.querySelector('.productImage').src=image;
+// for qunatity
+    productClone.querySelector(".productQuantity").textContent=lsAcutalData.quantity
+    // for price
+    productClone.querySelector(".productPrice").textContent=lsAcutalData.price
+
+
+
+// working on remove to cart button
+productClone.querySelector('.remove-to-cart-button').addEventListener('click',()=>removeProdFromCart(id))
+
+
+
 
   cartElement.append(productClone)
+
+
 })
 }
 
