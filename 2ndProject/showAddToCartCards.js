@@ -42,6 +42,7 @@ productClone.querySelector('.remove-to-cart-button').addEventListener('click',()
 
 
 
+
   cartElement.append(productClone)
 
 
