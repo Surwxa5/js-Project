@@ -3,10 +3,11 @@ import { getcartProductFromls } from "./getCartProducts";
 export const removeProdFromCart =(id)=>{
   
   let cartProducts=getcartProductFromls();
-  cartProducts = cartProducts.filter((curProd)=>curProd.id===id);
+ cartProducts = cartProducts.filter((curProd) => curProd.id !== id);
+
 
 // update the local storage after removing the item
- localStorage.setItem("cartProductls", JSON.stringify(arrLocalStorageproduct));
+localStorage.setItem("cartProductls", JSON.stringify(cartProducts));
    
 
 

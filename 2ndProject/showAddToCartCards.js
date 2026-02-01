@@ -1,6 +1,7 @@
 import products from "./api/products.json";
 import { fetchQuantityFromCartLS } from "./fetchQuantityFromCartLS";
 import { getcartProductFromls } from "./getCartProducts";
+import { incrementDecrement } from "./incrementDecrement";
 import { removeProdFromCart } from "./removeProdFromCart";
 
 
@@ -34,7 +35,10 @@ const lsAcutalData = fetchQuantityFromCartLS(id,price)
     // for price
     productClone.querySelector(".productPrice").textContent=lsAcutalData.price
 
-
+// handle increment and decrement button\
+productClone.querySelector(".stockElement").addEventListener("click",(event)=>{
+  incrementDecrement(event,id,stock,price)
+})
 
 // working on remove to cart button
 productClone.querySelector('.remove-to-cart-button').addEventListener('click',()=>removeProdFromCart(id))
