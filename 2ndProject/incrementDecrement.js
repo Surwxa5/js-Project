@@ -1,70 +1,65 @@
 import { getcartProductFromls } from "./getCartProducts";
 
-export const incrementDecrement=(event,id,stock,price)=>{
-  const currentCardElement=document.querySelector(`#card${id}`)
+export const incrementDecrement = (event, id, stock, price) => {
+  const currentCardElement = document.querySelector(`#card${id}`);
 
-// accesing the only productquentity data 
-const productQuantity=currentCardElement.querySelector(".productQuantity")
+  const productQuantity =
+    currentCardElement.querySelector(".productQuantity");
 
-const productPrice=currentCardElement.querySelector(".productPrice")
+  const productPrice =
+    currentCardElement.querySelector(".productPrice");
 
-let quantity=1;
-let localStoragePrice=0;
+  let quantity = 1;
+  let localStoragePrice = 0;
 
-
-// get the data form localStorage
-// get the data form ls if you have any id to check if that id exit in ls or not
   let localCartProduct = getcartProductFromls();
-  let existingProd=localCartProduct.find((curProd)=>curProd.id===id);
+  let existingProd = localCartProduct.find(
+    (curProd) => curProd.id === id
+  );
 
-  if(existingProd){
-    quantity= existingProd.quantity
-    localStoragePrice=existingProd.price;
+  if (existingProd) {
+    quantity = Number(existingProd.quantity);
+    localStoragePrice = Number(existingProd.price);
+  } else {
+    localStoragePrice = price;
   }
-  else{
-    localStoragePrice=price
-    price = price
+
+  //  INCREMENT
+  if (event.target.className === "cartIncrement") {
+    if (quantity < stock) {
+      quantity += 1;
+    }
   }
 
-if (event.target.className==="cartIncrement")
-{
-  if(quantity<stock){
-    quantity+=1;
+  //  DECREMENT
+  if (event.target.className === "cartDecrement") {
+    if (quantity > 1) {
+      quantity -= 1;
+    }
   }
-  else if(quantity===stock){
-    quantity=stock;
-    localStoragePrice = price * stock;
-  }
-}
 
-if (event.target.className==="cartDecrement")
-{
-  if(quantity>1){
-    quantity-=1;
-  }
-}
+  //  FIX 1: calculate correct price
+  localStoragePrice = price * quantity;
+  localStoragePrice=Number(localStoragePrice.toFixed(2))
 
-// finally we have to update actual local storage price
-localStoragePrice=price*quantity
+  //  FIX 2: UPDATE UI IN REAL TIME
+  productQuantity.innerText = quantity;
+  productPrice.innerText = `Rs${localStoragePrice}`;
 
- const updatedCart = arrLocalStorageProduct.map((curProd) => {
-      if (curProd.id === id) {
-        const newQuantity = Number(curProd.quantity) + quantity;
+  //  FIX 3: UPDATE LOCAL STORAGE CORRECTLY
+  const updatedCart = localCartProduct.map((curProd) => {
+    if (curProd.id === id) {
+      return {
+        ...curProd,
+        quantity: quantity,
+        price: localStoragePrice,
+      };
+    }
+    return curProd;
+  });
 
-        if (newQuantity > stock) {
-          alert("Stock limit exceeded");
-          return curProd;
-        }
-
-        return {
-          ...curProd,
-          quantity: newQuantity,
-          price: price * newQuantity,
-        };
-      }
-      return curProd;
-    });
-   localStorage.setItem("cartProductls", JSON.stringify(updatedCart));
-    updatedCart(updatedCart);
-    return;
-}
+  localStorage.setItem(
+    "cartProductls",
+    JSON.stringify(updatedCart)
+  );
+};

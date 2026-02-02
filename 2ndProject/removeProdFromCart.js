@@ -1,4 +1,5 @@
 import { getcartProductFromls } from "./getCartProducts";
+import { updateCart } from "./updateCart";
 
 export const removeProdFromCart =(id)=>{
   
