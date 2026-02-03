@@ -3,6 +3,7 @@ import { fetchQuantityFromCartLS } from "./fetchQuantityFromCartLS";
 import { getcartProductFromls } from "./getCartProducts";
 import { incrementDecrement } from "./incrementDecrement";
 import { removeProdFromCart } from "./removeProdFromCart";
+import { updateCartProductTotal } from "./updateCartProductTotal";
 
 
 let cartProducts=getcartProductFromls();
@@ -56,3 +57,6 @@ productClone.querySelector('.remove-to-cart-button').addEventListener('click',()
 
 // showing the carts Products
 showCartProcuct()
+
+// calculating the card total in our cartproducts page
+updateCartProductTotal();
