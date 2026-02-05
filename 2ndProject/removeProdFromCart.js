@@ -11,12 +11,16 @@ localStorage.setItem("cartProductls", JSON.stringify(cartProducts));
    
 
 
+
+
 // to remove the  div click
 
 let removeDiv=document.getElementById(`card${id}`)
 if(removeDiv)
 {
   removeDiv.remove();
+  // show toast when product added to the cart
+  showToast("delete",id);
 }
 updateCart(cartProducts)
 }
