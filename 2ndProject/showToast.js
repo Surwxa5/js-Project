@@ -12,6 +12,6 @@ else{
 
   // automatically remove the toast after a few second
   setTimeout(()=>{
-    
-  })
+    toast.remove();
+  },2000)
 }

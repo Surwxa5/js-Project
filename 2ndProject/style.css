@@ -300,14 +300,34 @@ gap: 4.8rem;
   font-size: 14px;
 }
 /* for toast notification */
-.toast{
+.toast {
   position: fixed;
   top: 2rem;
   right: 1.4rem;
-  background-color: var(--buttonColor);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border-color: red;
-  font-family: "urbanist";
+  
+  /* 1. Ensure it sits on top of everything else */
+  z-index: 9999; 
+  
+  /* 2. Visuals */
+  background-color: var(--buttonColor, #333); /* Fallback to dark grey if variable fails */
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  
+  /* 3. Border & Shadow for visibility */
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
+  /* 4. Typography */
+  font-family: "Urbanist", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  
+  /* 5. Entrance Animation */
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
